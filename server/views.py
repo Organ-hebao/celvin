@@ -11,7 +11,7 @@ def getInstances(request):
 
     config = {
         'Region':'shjr',
-        
+
         'method':'get'
     }
 
@@ -32,7 +32,6 @@ def getInstances(request):
             instanceName = instanceSet[i]['instanceName']
             lanIp = instanceSet[i]['lanIp']
             wanIpSet = instanceSet[i]['wanIpSet']
-            print wanIpSet
             os = instanceSet[i]['os']
             zoneName = instanceSet[i]['zoneName']
             is_existe = instance.objects.filter(lanIp=lanIp)
