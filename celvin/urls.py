@@ -16,9 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 import views
+from server import views as serurl
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-     url(r'^$', views.index),
+    url(r'^$', views.index),
+    url(r'^get_server',serurl.getInstances),
+    url(r'^list_server',serurl.listInstance),
 ]
 
