@@ -11,8 +11,8 @@ def getInstances(request):
 
     config = {
         'Region':'shjr',
-        'secretId':'',
-        'secretKey':'',
+        'secretId':'AKIDVTwtaxEtm65MOtq8smXNk9XYsipUarJo',
+        'secretKey':'uExGGjhJbNXPdVgFKno2qBUe6TTYS2rP',
         'method':'get'
     }
 
@@ -36,13 +36,18 @@ def getInstances(request):
             print wanIpSet
             os = instanceSet[i]['os']
             zoneName = instanceSet[i]['zoneName']
-            qs = instance()
-            qs.instanceName = instanceName
-            qs.lanIp = lanIp
-            qs.wanIpSet = wanIpSet
-            qs.os = os
-            qs.zoneName = zoneName
-            qs.save()
+            is_existe = instance.objects.filter(lanIp=lanIp)
+            if is_existe:
+                instance.objects.filter(lanIp=lanIp).update(instanceName = instanceName,lanIp = lanIp,
+                                        wanIpSet = wanIpSet,os = os,zoneName = zoneName)
+            else:
+                qs = instance()
+                qs.instanceName = instanceName
+                qs.lanIp = lanIp
+                qs.wanIpSet = wanIpSet
+                qs.os = os
+                qs.zoneName = zoneName
+                qs.save()
     except Exception,e:
         print 'exception',e
     return HttpResponse("成功获取腾讯云服务器信息")
