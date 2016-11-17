@@ -11,8 +11,7 @@ def getInstances(request):
 
     config = {
         'Region':'shjr',
-        'secretId':'AKIDVTwtaxEtm65MOtq8smXNk9XYsipUarJo',
-        'secretKey':'uExGGjhJbNXPdVgFKno2qBUe6TTYS2rP',
+        
         'method':'get'
     }
 
