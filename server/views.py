@@ -2,6 +2,7 @@
 from django.shortcuts import HttpResponse
 from qcloudapi.QcloudApi.qcloudapi import QcloudApi
 from server.models import instance
+from celvin.api import *
 from django.shortcuts import render_to_response
 import json
 
@@ -11,7 +12,7 @@ def getInstances(request):
 
     config = {
         'Region':'shjr',
-
+        
         'method':'get'
     }
 
@@ -48,6 +49,7 @@ def getInstances(request):
                 qs.save()
     except Exception,e:
         print 'exception',e
+    loginfo("Successful acquisition of qcloud instances")
     return HttpResponse("成功获取腾讯云服务器信息")
 
 def listInstance(request):
