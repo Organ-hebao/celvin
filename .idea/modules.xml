@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/celvin.iml" filepath="$PROJECT_DIR$/.idea/celvin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../jumpserver/.idea/jumpserver.iml" filepath="$PROJECT_DIR$/../jumpserver/.idea/jumpserver.iml" />
     </modules>
   </component>
 </project>

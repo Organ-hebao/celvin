@@ -12,7 +12,7 @@ def getInstances(request):
 
     config = {
         'Region':'shjr',
-        
+
         'method':'get'
     }
 

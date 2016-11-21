@@ -17,11 +17,14 @@ from django.conf.urls import url
 from django.contrib import admin
 import views
 from server import views as serurl
+from deploy import views as depurl
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
     url(r'^get_server',serurl.getInstances),
     url(r'^list_server',serurl.listInstance),
+    url(r'^list_app',depurl.listApps),
+     url(r'^add_app',depurl.addApps),
 ]
 

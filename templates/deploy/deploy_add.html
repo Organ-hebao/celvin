@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>荷包金融实例列表</title>
+    <title>荷包金融业务添加</title>
     <link href="/static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/metisMenu/metisMenu.min.css" rel="stylesheet">
     <link href="/static/css/sb-admin-2.css" rel="stylesheet">
@@ -73,46 +72,43 @@
                 </div>
             </div>
         </nav>
-        <div id="page-wrapper">
+       <div id="page-wrapper">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header"><a href="get_server">腾讯云实例列表更新</a></h1>
+                <div class="col-lg-6">
+                    <h4 class="page-header">业务添加</h4>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            实例列表
-                        </div>
-                        <div class="panel-body">
-                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                <thead>
-                                    <tr>
-                                        <th>实例名称</th>
-                                        <th>内网IP</th>
-                                        <th>外网IP</th>
-                                        <th>服务器类型</th>
-                                        <th>实例区域</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                {% for instance in instances %}
-                                    <tr class="odd gradeX">
-                                        <td>{{ instance.instanceName }}</td>
-                                        <td>{{ instance.lanIp }}</td>
-                                        <td>{{ instance.wanIpSet }}</td>
-                                        <td class="center">{{ instance.os }}</td>
-                                        <td class="center">{{ instance.zoneName }}</td>
-                                    </tr>
-                                {% endfor %}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+    <form id="assetForm" method="post" class="form-horizontal" action="add_app">
+            <div class="form-group"><label class="col-sm-1 control-label"> 业务名称</label>
+                <div class="col-sm-6"><input type="text" placeholder="业务名称(英文)" name="app_name" class="form-control"></div>
+            </div>
+                    <div class="form-group"><label class="col-sm-1 control-label"> 中文描述</label>
+                <div class="col-sm-6"><input type="text" placeholder="使用中文对业务进行描述" name="app_desc" class="form-control"></div>
+            </div>
+            <div class="form-group"><label class="col-sm-1 control-label">应用主机</label>
+                <div class="col-sm-6">
+                    <select type="text" name="proj_name" class="form-control" id="proj_id">
+                         {% for t in tsalist %}
+                          <option value ={{ t.0 }}>{{ t.1 }}</option>
+                         {% endfor %}
+                    </select>
                 </div>
             </div>
-    </div>
+            <div class="form-group"><label class="col-sm-1 control-label"> 应用路径 </label>
+                <div class="col-sm-6"><input type="text" placeholder="应用路径" name="app_path" class="form-control"></div>
+            </div>
+            <div class="form-group"><label class="col-sm-1 control-label"> 服务名称</label>
+                <div class="col-sm-6"><input type="text" placeholder="IIS 服务的名称" name="server_name" class="form-control"></div>
+            </div>
+            <div class="form-group"><label class="col-sm-1 control-label"> 日志位置</label>
+                <div class="col-sm-6"><input type="text" placeholder="日志路径" name="log_path" class="form-control"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 col-sm-offset-4">
+                    <button class="btn btn-primary" type="submit"> 提 交 </button>
+                </div>
+            </div>
+        </form>
     <script src="/static/js/jquery/jquery.min.js"></script>
     <script src="/static/js/bootstrap/bootstrap.min.js"></script>
     <script src="/static/js/MetisMenu/metisMenu.min.js"></script>
@@ -120,5 +116,7 @@
     <script src="/static/js/morrisjs/morris.min.js"></script>
     <script src="/static/js/data/morris-data.js"></script>
     <script src="/static/js/data/sb-admin-2.js"></script>
+
 </body>
+
 </html>
