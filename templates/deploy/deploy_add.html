@@ -79,29 +79,26 @@
                 </div>
             </div>
     <form id="assetForm" method="post" class="form-horizontal" action="add_app">
-            <div class="form-group"><label class="col-sm-1 control-label"> 业务名称</label>
-                <div class="col-sm-6"><input type="text" placeholder="业务名称(英文)" name="app_name" class="form-control"></div>
+            <div class="form-group"><label class="col-sm-1 control-label">应用名称</label>
+                <div class="col-sm-6"><input type="text" placeholder="业务名称(英文)" name="appName" class="form-control"></div>
             </div>
-                    <div class="form-group"><label class="col-sm-1 control-label"> 中文描述</label>
-                <div class="col-sm-6"><input type="text" placeholder="使用中文对业务进行描述" name="app_desc" class="form-control"></div>
+                    <div class="form-group"><label class="col-sm-1 control-label">描述</label>
+                <div class="col-sm-6"><input type="text" placeholder="使用中文对业务进行描述" name="appDesc" class="form-control"></div>
             </div>
             <div class="form-group"><label class="col-sm-1 control-label">应用主机</label>
                 <div class="col-sm-6">
-                    <select type="text" name="proj_name" class="form-control" id="proj_id">
-                         {% for t in tsalist %}
-                          <option value ={{ t.0 }}>{{ t.1 }}</option>
+                    <select type="text" name="appHost" class="form-control" id="appHost" multiple=”multiple” size="10">
+                         {% for t in instances %}
+                          <option value ={{ t.id }}>{{ t.lanIp }}</option>
                          {% endfor %}
                     </select>
                 </div>
             </div>
-            <div class="form-group"><label class="col-sm-1 control-label"> 应用路径 </label>
-                <div class="col-sm-6"><input type="text" placeholder="应用路径" name="app_path" class="form-control"></div>
+            <div class="form-group"><label class="col-sm-1 control-label"> 应用目录 </label>
+                <div class="col-sm-6"><input type="text" placeholder="应用路径" name="appDir" class="form-control"></div>
             </div>
-            <div class="form-group"><label class="col-sm-1 control-label"> 服务名称</label>
-                <div class="col-sm-6"><input type="text" placeholder="IIS 服务的名称" name="server_name" class="form-control"></div>
-            </div>
-            <div class="form-group"><label class="col-sm-1 control-label"> 日志位置</label>
-                <div class="col-sm-6"><input type="text" placeholder="日志路径" name="log_path" class="form-control"></div>
+            <div class="form-group"><label class="col-sm-1 control-label"> IIS名称</label>
+                <div class="col-sm-6"><input type="text" placeholder="IIS 服务的名称" name="iisName" class="form-control"></div>
             </div>
             <div class="form-group">
                 <div class="col-sm-2 col-sm-offset-4">

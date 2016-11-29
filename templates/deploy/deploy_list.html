@@ -14,7 +14,7 @@
     <link href="/static/css/morrisjs/morris.css" rel="stylesheet">
     <link href="/static/font/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
-<>
+<body>
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -93,15 +93,27 @@
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                        <th>业务名称</th>
-                                        <th>中文名称</th>
-                                        <th>应用主机</th>
+                                        <th>应用名称</th>
+                                        <th>描述</th>
                                         <th>应用目录</th>
-                                        <th>服务名称</th>
-                                        <th>日志位置</th>
+                                        <th>IIS名称</th>
+                                        <th>应用操作</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    {% for app in apps %}
+                                    <tr class="odd gradeX">
+                                        <td>{{ app.appName }}</td>
+                                        <td>{{ app.appDesc }}</td>
+                                        <td>{{ app.appDir }}</td>
+                                        <td class="center">{{ app.iisName}}</td>
+                                        <td class="text-center">
+                                            <a href="app_edit/?id={{ app.id }}" class="btn btn-xs btn-info">编辑</a>
+                                            <a href="app_del/?id={{ app.id }}" class="btn btn-xs btn-danger">删除</a>
+                                            <a href="app_deploy/?id={{ app.id }}" class="btn btn-xs btn-warning">发布</a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
                                 </tbody>
                             </table>
                         </div>
@@ -116,5 +128,5 @@
     <script src="/static/js/morrisjs/morris.min.js"></script>
     <script src="/static/js/data/morris-data.js"></script>
     <script src="/static/js/data/sb-admin-2.js"></script>
-</body>
+ </body>
 </html>

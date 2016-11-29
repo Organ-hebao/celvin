@@ -72,7 +72,7 @@ DATABASES = {
         'NAME': "celvin",
         'USER': "root",
         'PASSWORD': "Hebaomysql123$",
-        'HOST': "192.168.2.138",
+        'HOST': "192.168.2.245",
         'PORT': "3306",
         'use_unicode': True,
         'charset': 'utf8',

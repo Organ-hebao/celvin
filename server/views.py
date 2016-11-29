@@ -1,7 +1,7 @@
 #coding:utf-8
 from django.shortcuts import HttpResponse
 from qcloudapi.QcloudApi.qcloudapi import QcloudApi
-from server.models import instance
+from server.models import Instance
 from celvin.api import *
 from django.shortcuts import render_to_response
 import json
@@ -35,12 +35,12 @@ def getInstances(request):
             wanIpSet = instanceSet[i]['wanIpSet']
             os = instanceSet[i]['os']
             zoneName = instanceSet[i]['zoneName']
-            is_existe = instance.objects.filter(lanIp=lanIp)
+            is_existe = Instance.objects.filter(lanIp=lanIp)
             if is_existe:
-                instance.objects.filter(lanIp=lanIp).update(instanceName = instanceName,lanIp = lanIp,
+                Instance.objects.filter(lanIp=lanIp).update(instanceName = instanceName,lanIp = lanIp,
                                         wanIpSet = wanIpSet,os = os,zoneName = zoneName)
             else:
-                qs = instance()
+                qs = Instance()
                 qs.instanceName = instanceName
                 qs.lanIp = lanIp
                 qs.wanIpSet = wanIpSet
@@ -53,7 +53,7 @@ def getInstances(request):
     return HttpResponse("成功获取腾讯云服务器信息")
 
 def listInstance(request):
-    instances = instance.objects.all()
+    instances = Instance.objects.all()
     return render_to_response("server/server_list.html",locals())
 
 
