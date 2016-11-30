@@ -108,9 +108,9 @@
                                         <td>{{ app.appDir }}</td>
                                         <td class="center">{{ app.iisName}}</td>
                                         <td class="text-center">
-                                            <a href="app_edit/?id={{ app.id }}" class="btn btn-xs btn-info">编辑</a>
-                                            <a href="app_del/?id={{ app.id }}" class="btn btn-xs btn-danger">删除</a>
-                                            <a href="app_deploy/?id={{ app.id }}" class="btn btn-xs btn-warning">发布</a>
+                                            <a href="app_edit?id={{ app.id }}" class="btn btn-xs btn-info">编辑</a>
+                                            <a href="app_del?id={{ app.id }}" class="btn btn-xs btn-danger">删除</a>
+                                            <a href="app_deploy?id={{ app.id }}" class="btn btn-xs btn-warning">发布</a>
                                         </td>
                                     </tr>
                                 {% endfor %}

@@ -28,3 +28,7 @@ def addApps(request):
                     Application(appName=appName,appDesc=appDesc,appHost=host,appDir=appDir,iisName=iisName).save()
           return HttpResponseRedirect('list_app')
 
+
+
+def appDeploy(request):
+     return render_to_response("deploy/app_deploy_list.html",locals())

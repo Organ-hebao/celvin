@@ -25,6 +25,8 @@ urlpatterns = [
     url(r'^get_server',serurl.getInstances),
     url(r'^list_server',serurl.listInstance),
     url(r'^list_app',depurl.listApps),
-     url(r'^add_app',depurl.addApps),
+    url(r'^add_app',depurl.addApps),
+    url(r'^app_deploy',depurl.appDeploy),
+
 ]
 
