@@ -56,7 +56,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deploy/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.964285">
+            <state vertical-scroll-proportion="0.0">
               <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -88,7 +88,7 @@
       <file leaf-file-name="deploy_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/deploy/deploy_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.074074">
+            <state vertical-scroll-proportion="0.0">
               <caret line="112" column="63" selection-start-line="112" selection-start-column="63" selection-end-line="112" selection-end-column="63" />
               <folding />
             </state>
@@ -110,8 +110,8 @@
       <file leaf-file-name="app_deploy_list.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/deploy/app_deploy_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37891737">
-              <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.5940171">
+              <caret line="143" column="28" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -194,7 +194,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -307,6 +306,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -974,7 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33206108">
           <caret line="433" column="6" selection-start-line="433" selection-start-column="6" selection-end-line="433" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,7 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23076923">
           <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -998,9 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1812977">
           <caret line="5" column="14" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="14" />
-          <folding>
-            <element signature="e#14#53#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1015,9 +1010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3625954">
           <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="e#57#85#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1049,7 +1041,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/deploy/deploy_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.074074">
+        <state vertical-scroll-proportion="0.0">
           <caret line="112" column="63" selection-start-line="112" selection-start-column="63" selection-end-line="112" selection-end-column="63" />
           <folding />
         </state>
@@ -1067,7 +1059,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deploy/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.964285">
+        <state vertical-scroll-proportion="0.0">
           <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
@@ -1077,8 +1069,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/deploy/app_deploy_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37891737">
-          <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.5940171">
+          <caret line="143" column="28" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
           <folding />
         </state>
       </provider>
